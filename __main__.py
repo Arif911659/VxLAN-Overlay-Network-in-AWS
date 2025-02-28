@@ -6,6 +6,7 @@ import pulumi_aws as aws
 # Define the shell script as user_data
 user_data_script = """#!/bin/bash
 sudo apt update -y
+sudo apt install net-tools -y
 sudo apt install -y docker.io
 sudo systemctl start docker
 sudo systemctl enable docker
